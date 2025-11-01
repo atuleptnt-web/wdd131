@@ -17,22 +17,21 @@ body {
 header {
   text-align: center;
   padding: 20px 0;
-  border-bottom: 2px solid #ccc;
+  background-color: #003366; /* Deep blue background */
+  color: #fff;
 }
 
 header h1 {
   font-size: 1.8rem;
-  color: #003366;
 }
 
 header h1 span {
-  color: #f4b400; /* Accent color for name */
+  color: #f4b400; /* Yellow accent for name */
 }
 
 /* Navigation bar */
 nav {
   background-color: #222;
-  margin-top: 10px;
 }
 
 nav ul {
@@ -67,36 +66,36 @@ main {
 /* Section styles */
 section {
   margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
 }
 
-#about h2,
-#projects\:card h2,
-#resources\:card h2 {
-  color: #003366;
-  margin-bottom: 10px;
-}
-
-#about p {
+section h2 {
+  background-color: #0077cc; /* Bright blue heading background */
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
   margin-bottom: 15px;
 }
 
-#projects\:card ul,
-#resources\:card ul {
+/* Lists and links */
+ul {
   list-style: none;
   padding-left: 0;
 }
 
-#projects\:card li,
-#resources\:card li {
+li {
   margin-bottom: 10px;
 }
 
-#resources\:card a {
+a {
   text-decoration: none;
   color: #0077cc;
 }
 
-#resources\:card a:hover {
+a:hover {
   text-decoration: underline;
 }
 
@@ -104,9 +103,10 @@ section {
 footer {
   text-align: center;
   font-size: 0.9em;
-  color: #555;
-  border-top: 2px solid #ccc;
+  color: #fff;
+  background-color: #003366; /* Match header */
   padding: 15px 0;
+  margin-top: 30px;
 }
 
 footer p {
