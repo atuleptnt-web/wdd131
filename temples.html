@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple Album</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)" />
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menu-button">☰</button>
+    <nav id="menu-items">
+      <a href="#">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Temples Around the World</h2>
+    <div class="grid-container">
+      <!-- Repeat this figure block 9 times -->
+      <figure>
+        <img src="images/placeholder.jpg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Paul Tetteh Nerquaye-Tetteh</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+</body>
+</html>
