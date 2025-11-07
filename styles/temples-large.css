@@ -1,13 +1,10 @@
-/* temples-large.css */
 @media screen and (min-width: 768px) {
   nav {
-    display: flex !important;
+    display: flex;
     justify-content: center;
+    gap: 1rem;
     flex-direction: row;
-  }
-
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    flex-wrap: wrap;
   }
 
   #menu-button {
@@ -15,6 +12,10 @@
   }
 
   #menu-items {
-    display: flex !important;
+    display: flex;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
