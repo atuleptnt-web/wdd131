@@ -38,13 +38,10 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 10px 0;
   list-style: none;
-}
-
-nav li {
-  margin: 0;
 }
 
 nav a {
@@ -63,68 +60,66 @@ nav a:focus {
   outline: none;
 }
 
-/* Main layout */
-main {
-  display: flex;
-  flex-direction: column;
+/* Main two-column layout */
+main.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 30px;
+  max-width: 960px;
   margin: 30px auto;
-  max-width: 800px;
+  padding: 0 20px;
 }
 
+/* Card styling */
 .card {
   background-color: #fefae0;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  text-align: center;
 }
 
-.card img.portrait {
-  max-width: 200px;
-  border-radius: 8px;
-  margin-top: 15px;
+/* Stacked sections inside one card */
+.stacked-card .section-block {
+  margin-bottom: 30px;
 }
 
-.card img.flag {
-  max-width: 120px;
-  margin: 15px auto;
-  display: block;
-}
-/* Section headings */
-section h2 {
+.stacked-card h2 {
   background-color: #0077cc;
   color: #fff;
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 15px;
-  width: 100%;
-}
-
-
-
-/* Title text */
-.title {
   font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 20px;
 }
 
-/* Horizontal rule */
-hr {
-  border: none;
-  border-top: 2px solid #ccc;
-  margin: 1em 0;
+.section-block img.portrait {
+  max-width: 200px;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
-/* Web Dev Resources */
+.section-block img.flag {
+  max-width: 100px;
+  display: block;
+  margin: 10px 0;
+}
+
+/* Resources list */
+#resources h2 {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
 #resources ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
 #resources li {
@@ -156,25 +151,20 @@ footer {
   margin-top: 30px;
 }
 
-
 footer p {
   margin: 5px 0;
 }
 
 /* Responsive layout */
 @media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-    text-align: center;
+  main.grid-layout {
+    grid-template-columns: 1fr;
   }
 
-  .card img {
-    max-width: 100%;
-    margin-top: 15px;
-  }
-
-  p {
-    width: 100%;
+  .section-block img.portrait,
+  .section-block img.flag {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   nav ul {
