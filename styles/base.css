@@ -13,6 +13,7 @@ body {
   padding: 0 20px;
 }
 
+/* Header styles */
 header {
   text-align: center;
   padding: 20px;
@@ -25,6 +26,11 @@ header h1 {
   margin-bottom: 10px;
 }
 
+header h1 span {
+  color: #f4b400;
+}
+
+/* Navigation bar */
 nav {
   background-color: #0a9396;
 }
@@ -35,6 +41,11 @@ nav ul {
   flex-wrap: wrap;
   gap: 20px;
   padding: 10px 0;
+  list-style: none;
+}
+
+nav li {
+  margin: 0;
 }
 
 nav a {
@@ -42,14 +53,18 @@ nav a {
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 4px;
+  text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   background-color: #94d2bd;
   color: #000;
+  outline: none;
 }
 
+/* Main layout */
 main {
   display: flex;
   flex-direction: column;
@@ -58,10 +73,11 @@ main {
   max-width: 960px;
 }
 
+/* Card layout */
 .card {
   background-color: #fefae0;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -71,6 +87,7 @@ main {
 
 .card img {
   max-width: 200px;
+  height: auto;
   border-radius: 8px;
 }
 
@@ -80,6 +97,24 @@ main {
   line-height: 1.6;
 }
 
+/* Section headings */
+section h2 {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Flag image */
+.flag {
+  max-width: 120px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Title text */
 .title {
   font-size: 1.2rem;
   font-weight: bold;
@@ -87,22 +122,20 @@ main {
   margin-top: 20px;
 }
 
+/* Horizontal rule */
 hr {
   border: none;
   border-top: 2px solid #ccc;
   margin: 1em 0;
 }
 
-.card img.flag {
-  max-width: 120px;
-  display: block;
-  margin: 0 auto;
-}
-
+/* Web Dev Resources */
 #resources ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
+  list-style: none;
+  padding-left: 0;
 }
 
 #resources li {
@@ -110,9 +143,20 @@ hr {
   padding: 10px;
   border-radius: 6px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
+#resources a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#resources a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styles */
 footer {
   text-align: center;
   background-color: #005f73;
@@ -120,8 +164,31 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
   border-top: 4px solid #94d2bd;
+  margin-top: 30px;
 }
 
 footer p {
   margin: 5px 0;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card img {
+    max-width: 100%;
+    margin-top: 15px;
+  }
+
+  p {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
