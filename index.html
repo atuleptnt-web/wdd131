@@ -6,6 +6,9 @@
   <meta name="description" content="This website is about Paul Tetteh Nerquaye-Tetteh who is a student of WDD 131 - Dynamic Web Fundamentals and his " >
   <meta name="author" content="Paul Tetteh Nerquaye-Tetteh">
   <title>WDD 131 - Dynamic Web Fundamentals - Paul Tetteh Nerquaye-Tetteh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles/base.css" >
   <script src="scripts/getdates.js" defer></script>
 </head>
@@ -22,33 +25,42 @@
     </nav>
   </header>
 
-  <main>
-    <section id="about" class="card">
+<main>
+  <section id="about" class="card">
+    <div>
       <h2>About Me</h2>
-      <p>Hi, I'm Paul Tetteh Nerquaye-Tetteh - a passionate developer and educator focused on making programming accessible and engaging. I love refining layouts, writing clean code, and creating resources that help others learn.</p>
-      <img src="images/my_protrait.png" alt="Portrait of Paul" />
-   
-      <p class="title">Accra, Ghana </p>
-      <hr>
-      <img src="images/ghana_flag.jpg" alt="Portrait of Paul" />
-      <p>Accra is the capitol city of my country Ghana, It is a bustling city with all sorts of experiences.
-        There are very beautiful scenes across the city. There are so main places in Accra. To really explore the city ,
-        i recommend you go with the local guides</p>
-    </section>
+      <p>Hi, I'm Paul Tetteh Nerquaye-Tetteh — a passionate developer and educator focused on making programming accessible and engaging. I love refining layouts, writing clean code, and creating resources that help others learn.</p>
+      <p class="title">Accra, Ghana</p>
+    </div>
+    <img src="images/my_protrait.png" alt="Portrait of Paul Tetteh Nerquaye-Tetteh" />
+  </section>
 
-    <section id="resources" class="card">
-      <h2>Web Dev Resources</h2>
-      <ul>
-        <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
-        <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
-        <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
-        <li><a href="https://dev.to/">Dev.to Community</a></li>
-      </ul>
-    </section>
-  </main>
+  <section class="card">
+    <div>
+      <h2>Accra, Ghana</h2>
+      <p>Accra is the capital city of Ghana. It’s a vibrant place full of diverse experiences and beautiful scenes. To truly explore the city, I recommend going with local guides.</p>
+    </div>
+    <img src="images/ghana_flag.jpg" alt="Flag of Ghana" class="flag" />
+  </section>
+
+  <section id="resources" class="card">
+    <h2>Web Dev Resources</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+      <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+      <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+      <li><a href="https://dev.to/">Dev.to Community</a></li>
+    </ul>
+  </section>
+
+  <section id="Final Project" class="card">
+    <h2>Final Project</h2>
+    <p>Coming soon! Stay tuned for my final project showcasing dynamic web fundamentals.</p>
+  </section>
+</main>
 
   <footer>
-  <p id="footerCopyright"></p>
+  <p id="footerCopyright">&copy; <span id="year"></span> Paul Tetteh Nerquaye-Tetteh</p>
   <p id="lastModified"></p>
 
   </footer>
