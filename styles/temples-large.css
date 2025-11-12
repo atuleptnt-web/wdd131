@@ -1,18 +1,22 @@
+
+/* === Responsive Styles === */
 @media screen and (min-width: 768px) {
-  nav {
+  header {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
   }
 
   #menu-button {
     display: none;
   }
 
-  #menu-items {
+  nav ul {
     display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0;
   }
 
   .grid-container {
