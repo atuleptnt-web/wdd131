@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Ghana</title>
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Discover Ghana</h1>
+  </header>
+
+  <picture class="hero">
+    <source srcset="images/ghana-hero-large.webp" media="(min-width: 768px)">
+    <img src="images/ghana-hero-small.webp" alt="Canopy walkway in Ghana">
+  </picture>
+
+  <main>
+    <section class="data">
+      <h2>Data</h2>
+      <p>Area: 238,533 sq km</p>
+      <p>Population: 32 million</p>
+      <p>Capital: Accra</p>
+      <p>Languages: English</p>
+      <p>Currency: Ghanaian Cedi</p>
+      <p>Time Zone: GMT</p>
+    </section>
+
+    <section class="weather">
+      <h2>Weather <span class="icon"></span></h2>
+      <img src="images/weather-icon.svg" alt="Weather icon" class="mobile-icon" />
+      <p>Temperature: <span id="temp">28</span>°C</p>
+      <p>Wind Speed: <span id="speed">10</span> km/h</p>
+      <p>Wind Chill: <span id="chill">Calculating...</span></p>
+      <p>Conditions: Partly Cloudy</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Paul Tetteh Nerquaye-Tetteh, Accra, Ghana</p>
+    <p>Last Modified: <span id="modified"></span></p>
+  </footer>
+
+</body>
+</html>
