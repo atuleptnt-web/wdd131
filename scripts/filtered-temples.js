@@ -68,37 +68,58 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
+  
+  // Add more temple objects here...
   {
     templeName: "Birmingham Alabama",
-    location: "Birmingham Alabama",
+    location: "Birmingham Alabama, United States",
     dedicated: "2000, September, 3",
     area: 116642,
     imageUrl:
     "https://churchofjesuschristtemples.org/assets/img/temples/birmingham-alabama-temple/birmingham-alabama-temple-62630.jpg"
-  },
+  }, 
   {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  },
-  {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  },
-  {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  },
-  // Add more temple objects here...
+  templeName: "Accra Ghana",
+  location: "Accra, Ghana",
+  dedicated: "2004, January, 11",
+  area: 17500,
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-8207.jpg"
+},
+{
+  templeName: "Salt Lake Utah",
+  location: "Salt Lake City, Utah, United States",
+  dedicated: "1893, April, 6",
+  area: 253015,
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
+},
+{
+  templeName: "Rome Italy",
+  location: "Rome, Italy",
+  dedicated: "2019, March, 10",
+  area: 41000,
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-3544.jpg"
+},
 ];
+
+function displayTemples(filteredTemples) {
+  const container = document.getElementById("temples");
+  container.innerHTML = ""; // clear previous content
+
+  filteredTemples.forEach(temple => {
+    const card = document.createElement("section");
+    card.classList.add("temple-card");
+
+    card.innerHTML = `
+      <h2>${temple.templeName}</h2>
+      <p><strong>Location:</strong> ${temple.location}</p>
+      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+      <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+// Initial load
+displayTemples(temples);
