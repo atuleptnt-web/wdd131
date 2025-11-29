@@ -150,22 +150,22 @@ function displayTemples(filteredTemples) {
 displayTemples(temples);
 
 // Navigation menu event listeners
-document.getElementById("nav-old").addEventListener("click", () => {
+document.getElementById("old").addEventListener("click", () => {
   displayTemples(filterOld());
 });
 
-document.getElementById("nav-new").addEventListener("click", () => {
+document.getElementById("new").addEventListener("click", () => {
   displayTemples(filterNew());
 });
 
-document.getElementById("nav-large").addEventListener("click", () => {
+document.getElementById("large").addEventListener("click", () => {
   displayTemples(filterLarge());
 });
 
-document.getElementById("nav-small").addEventListener("click", () => {
+document.getElementById("small").addEventListener("click", () => {
   displayTemples(filterSmall());
 });
 
-document.getElementById("nav-home").addEventListener("click", () => {
+document.getElementById("home").addEventListener("click", () => {
   displayTemples(filterHome());
 });
