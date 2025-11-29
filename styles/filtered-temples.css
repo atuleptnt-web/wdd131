@@ -64,13 +64,13 @@ main {
   margin: auto;
   padding: 1rem;
 }
-
+/*
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
-
+*/
 /* === Figure Cards === */
 figure {
   background: white;
