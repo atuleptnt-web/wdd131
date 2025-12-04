@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tourist Sites in Ghana — Explore</title>
+  <meta name="description" content="Explore Ghana's top tourist destinations with images, descriptions, and travel tips.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Paul Tetteh Nerquaye-Tetteh">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Tourist Sites in Ghana</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sites.html" aria-current="page">Sites</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="btn" aria-pressed="false" aria-label="Toggle theme">Theme</button>
+  </header>
+
+  <main id="main-content">
+    <h1>Explore Ghana’s Tourist Sites</h1>
+    <p>Discover Ghana’s rich history, culture, and natural wonders. Use the filters below to find destinations that suit your interests.</p>
+
+    <!-- Filter Form -->
+    <section aria-labelledby="filters-title">
+      <h2 id="filters-title">Filter Sites</h2>
+      <form id="filter-form" aria-describedby="filter-help">
+        <fieldset>
+          <legend>Refine results</legend>
+
+          <div class="form-row">
+            <label for="region">Region</label>
+            <select id="region" name="region">
+              <option value="all">All Regions</option>
+              <option value="Greater Accra">Greater Accra</option>
+              <option value="Central">Central</option>
+              <option value="Northern">Northern</option>
+              <option value="Eastern">Eastern</option>
+              <option value="Volta">Volta</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="type">Type</label>
+            <select id="type" name="type">
+              <option value="all">All Types</option>
+              <option value="Historical">Historical</option>
+              <option value="Natural">Natural</option>
+              <option value="Cultural">Cultural</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Apply filters</button>
+            <button type="reset" class="btn btn-secondary" id="reset-filters">Reset</button>
+          </div>
+        </fieldset>
+        <p id="filter-help">Choose a region and type to refine results. Your last filter is remembered.</p>
+      </form>
+
+      <p id="results-count" aria-live="polite" class="muted">Loading results…</p>
+    </section>
+
+    <!-- Results Section -->
+    <section aria-labelledby="results-title">
+      <h2 id="results-title">Tourist Sites</h2>
+      <div id="cards" class="grid cards" aria-live="polite" aria-busy="false">
+        <!-- Cards rendered dynamically by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Tourist Sites in Ghana</p>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script type="module" src="scripts/data.js" defer></script>
+  <script type="module" src="scripts/ui.js" defer></script>
+  <script type="module" src="scripts/main.js" defer></script>
+</body>
+</html>

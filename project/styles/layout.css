@@ -1,0 +1,75 @@
+/* Header & Nav */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  border-bottom: 1px solid #ddd;
+  background: var(--color-accent-light);
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--color-accent);
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav a {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+}
+
+.nav a:hover,
+.nav a:focus {
+  background: var(--color-accent-light);
+}
+
+/* Footer */
+.site-footer {
+  padding: var(--space-md);
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* Hero */
+.hero {
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  background: var(--color-accent-light);
+}
+
+.hero h1 {
+  margin-bottom: var(--space-md);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid.cards {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .grid.cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .grid.cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
