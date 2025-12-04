@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Site Plan — Tourist Sites in Ghana</title>
+  <meta name="description" content="Planning document for the Tourist Sites in Ghana website: purpose, audience, color schema, typography, and wireframes.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Typography: Inter for body; Merriweather for headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Color schema */
+      --color-bg: #ffffff;
+      --color-text: #222222;
+      --color-accent: #1565c0;    /* Deep blue: links, buttons */
+      --color-primary: #D4AF37;   /* Ghana gold: headings, highlights */
+      --color-secondary: #2E7D32; /* Forest green: accents, section borders */
+      --color-muted: #666666;
+      --border: 1px solid #e5e5e5;
+
+      /* Spacing & radius */
+      --space-1: 0.5rem;
+      --space-2: 1rem;
+      --space-3: 1.5rem;
+      --space-4: 2rem;
+      --radius: 0.5rem;
+    }
+
+    /* Base styles */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.6;
+    }
+
+    header.site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-2);
+      border-bottom: var(--border);
+      background: #f8fafc;
+    }
+    .brand {
+      font-family: "Merriweather", Georgia, serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: var(--space-3) var(--space-2);
+    }
+    h1, h2, h3 {
+      font-family: "Merriweather", Georgia, serif;
+      color: var(--color-primary);
+      line-height: 1.25;
+      margin: var(--space-2) 0 var(--space-1);
+    }
+    p, li {
+      color: var(--color-text);
+    }
+    .lead {
+      color: var(--color-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Section cards */
+    section.plan-section {
+      margin: var(--space-3) 0;
+      padding: var(--space-2);
+      border: var(--border);
+      border-left: 4px solid var(--color-secondary);
+      border-radius: var(--radius);
+      background: #ffffff;
+    }
+
+    /* Color swatches */
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: var(--space-2);
+      margin-top: var(--space-2);
+    }
+    .swatch {
+      border: var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #fff;
+    }
+    .swatch .chip {
+      height: 56px;
+    }
+    .swatch .label {
+      padding: var(--space-1);
+      font-size: 0.95rem;
+    }
+
+    .chip.primary { background: var(--color-primary); }
+    .chip.secondary { background: var(--color-secondary); }
+    .chip.accent { background: var(--color-accent); }
+    .chip.text { background: var(--color-text); }
+
+    /* Typography samples */
+    .type-samples {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+      margin-top: var(--space-2);
+    }
+    .type-block {
+      border: var(--border);
+      border-radius: var(--radius);
+      padding: var(--space-2);
+      background: #fcfcfc;
+    }
+
+    /* Wireframes */
+    .wireframes {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-3);
+      margin-top: var(--space-2);
+    }
+    @media (min-width: 800px) {
+      .wireframes {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    pre.wire {
+      border: var(--border);
+      border-radius: var(--radius);
+      background: #0b1f33;
+      color: #d0e4ff;
+      padding: var(--space-2);
+      overflow: auto;
+      font-size: 0.9rem;
+      line-height: 1.3;
+    }
+    .wire-caption {
+      margin-top: var(--space-1);
+      color: var(--color-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Links & buttons */
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
+
+    footer.site-footer {
+      margin-top: var(--space-4);
+      padding: var(--space-2);
+      border-top: var(--border);
+      text-align: center;
+      color: var(--color-muted);
+      font-size: 0.95rem;
+      background: #f8fafc;
+    }
+
+    /* Accessibility helpers */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <a class="brand" href="#">Tourist Sites in Ghana — Site Plan</a>
+    <span class="lead">A living blueprint for design and development</span>
+  </header>
+
+  <main id="main-content">
+    <section class="plan-section" aria-labelledby="name-title">
+      <h2 id="name-title">Site name</h2>
+      <p><strong>Tourist Sites in Ghana</strong></p>
+      <p>This name clearly communicates the website’s focus: showcasing Ghana’s most compelling destinations—historical, cultural, and natural—while helping visitors decide what best suits their interests.</p>
+      <p><strong>Optional domain availability:</strong> touristsitesghana.com (not required for class)</p>
+      <p><strong>Logo concept:</strong> Wordmark with Ghana gold heading color and a simple Kente-inspired accent stripe.</p>
+    </section>
+
+    <section class="plan-section" aria-labelledby="purpose-title">
+      <h2 id="purpose-title">Site purpose</h2>
+      <p>The site guides travelers through Ghana’s top tourist destinations with concise descriptions, images, and “What to Expect” highlights. It provides interactive filters (by region and type), travel tips, and references, helping users quickly find places aligned with their interests and plan memorable visits.</p>
+      <ul>
+        <li><strong>Content:</strong> Photos, names, descriptions, and expectations for each site</li>
+        <li><strong>Tools:</strong> Interactive filters (Region, Type), saved preferences, accessible forms</li>
+        <li><strong>Outcome:</strong> A user-friendly starting point for exploring Ghana’s history, culture, and nature</li>
+      </ul>
+    </section>
+
+    <section class="plan-section" aria-labelledby="scenarios-title">
+      <h2 id="scenarios-title">Scenarios</h2>
+      <ul>
+        <li><strong>Family traveler:</strong> “Which sites near Cape Coast are kid-friendly and offer guided tours?”</li>
+        <li><strong>Nature enthusiast:</strong> “Where can I see wildlife and waterfalls within a weekend itinerary?”</li>
+        <li><strong>History student:</strong> “Which historical sites in Greater Accra and Central Regions provide curated exhibits?”</li>
+      </ul>
+    </section>
+
+    <section class="plan-section" aria-labelledby="colors-title">
+      <h2 id="colors-title">Color schema</h2>
+      <p>Colors draw from Ghana’s visual identity. Gold emphasizes headings; forest green accents sections; deep blue improves link and button visibility; neutral text ensures readability.</p>
+
+      <div class="swatches" role="list">
+        <div class="swatch" role="listitem" aria-label="Primary Ghana gold">
+          <div class="chip primary" aria-hidden="true"></div>
+          <div class="label"><strong>Primary (Gold):</strong> #D4AF37 — Headings, highlights</div>
+        </div>
+        <div class="swatch" role="listitem" aria-label="Secondary forest green">
+          <div class="chip secondary" aria-hidden="true"></div>
+          <div class="label"><strong>Secondary (Green):</strong> #2E7D32 — Section borders, accents</div>
+        </div>
+        <div class="swatch" role="listitem" aria-label="Accent deep blue">
+          <div class="chip accent" aria-hidden="true"></div>
+          <div class="label"><strong>Accent (Deep blue):</strong> #1565C0 — Links, buttons</div>
+        </div>
+        <div class="swatch" role="listitem" aria-label="Neutral text">
+          <div class="chip text" aria-hidden="true"></div>
+          <div class="label"><strong>Text (Neutral):</strong> #222222 — Body copy</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan-section" aria-labelledby="type-title">
+      <h2 id="type-title">Typography</h2>
+      <p>Two complementary fonts ensure clear hierarchy and readability:</p>
+      <ul>
+        <li><strong>Headings:</strong> Merriweather (serif, bold) — used for h1–h3, highlights</li>
+        <li><strong>Body:</strong> Inter (sans-serif) — used for paragraphs, lists, UI text</li>
+      </ul>
+
+      <div class="type-samples">
+        <div class="type-block">
+          <h3>Heading sample — Merriweather</h3>
+          <p>Discover Ghana’s tourist treasures across history, culture, and nature.</p>
+        </div>
+        <div class="type-block" style="font-family: 'Inter', system-ui, sans-serif;">
+          <h3 style="font-family: 'Merriweather', Georgia, serif;">Body sample — Inter</h3>
+          <p>Use the interactive filters to find sites by region and type, and explore what to expect at each location.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan-section" aria-labelledby="wireframes-title">
+      <h2 id="wireframes-title">Wireframe</h2>
+      <p>Simple structural sketches for mobile and wide desktop views of the home page.</p>
+
+      <div class="wireframes">
+        <div>
+          <h3>Mobile (portrait)</h3>
+          <pre class="wire" aria-label="Mobile wireframe">
++--------------------------------------------------+
+| Header: Brand • Menu • Theme                     |
++--------------------------------------------------+
+| Hero                                             |
+|  - H1: Welcome to Ghana’s Tourist Treasures      |
+|  - Intro paragraph                               |
+|  - Button: Explore Sites                         |
++--------------------------------------------------+
+| Featured Destinations (cards in 1 column)        |
+|  [Image]                                         |
+|  Title                                           |
+|  Short description + Expect                      |
+|  Button: Learn more                              |
+|  --- repeat for 3 featured sites ---             |
++--------------------------------------------------+
+| Footer: References link                          |
++--------------------------------------------------+
+          </pre>
+          <p class="wire-caption">Cards stack; primary actions are centered. Navigation collapses to a menu button.</p>
+        </div>
+
+        <div>
+          <h3>Desktop (wide)</h3>
+          <pre class="wire" aria-label="Desktop wireframe">
++----------------------------------------------------------------------------------+
+| Header: Brand (left) | Nav (center) | Theme (right)                             |
++----------------------------------------------------------------------------------+
+| Hero: H1 + intro + CTA centered                                                   |
++----------------------------------------------------------------------------------+
+| Featured Destinations (grid 3 columns)                                            |
+|  [Card 1]    [Card 2]    [Card 3]                                                |
+|  Image       Image        Image                                                   |
+|  Title       Title        Title                                                   |
+|  Desc        Desc         Desc                                                    |
+|  Button      Button       Button                                                  |
++----------------------------------------------------------------------------------+
+| Footer: References link                                                           |
++----------------------------------------------------------------------------------+
+          </pre>
+          <p class="wire-caption">Three-column grid for featured cards; balanced header with visible primary navigation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan-section" aria-labelledby="testing-title">
+      <h2 id="testing-title">Testing and validation plan</h2>
+      <ul>
+        <li><strong>HTML/CSS validation:</strong> Validate pages using W3C validators; remove unused CSS rules.</li>
+        <li><strong>Accessibility:</strong> Check keyboard navigation, focus states, alt text, and heading order (WCAG AA contrast).</li>
+        <li><strong>Performance:</strong> Optimize images (WebP/JPEG), apply lazy loading, defer scripts.</li>
+        <li><strong>Best practices & SEO:</strong> Use descriptive titles, meta descriptions, meaningful link text, and canonical URLs.</li>
+        <li><strong>Responsiveness:</strong> Test mobile (portrait/landscape), tablet, and large desktop breakpoints.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; 2025 Tourist Sites in Ghana — Site Plan</p>
+  </footer>
+</body>
+</html>
