@@ -90,69 +90,44 @@
         </div>
       </div>
     </section>
+<section class="plan-section" aria-labelledby="wireframes-title">
+  <h2 id="wireframes-title">Wireframe</h2>
+  <p>Simple structural sketches for mobile and wide desktop views of the home page.</p>
 
-    <section class="plan-section" role="img" aria-labelledby="wireframes-title">
-      <h2 id="wireframes-title">Wireframe</h2>
-      <p>Simple structural sketches for mobile and wide desktop views of the home page.</p>
-
-      <div class="wireframes">
-        <div>
-          <h3>Mobile (portrait)</h3>
-          <pre class="wire" aria-label="Mobile wireframe">
+  <div class="wireframes">
+    <div>
+      <h3>Mobile (portrait)</h3>
+      <pre class="wire">
 +--------------------------------------------------+
 | Header: Brand • Menu • Theme                     |
 +--------------------------------------------------+
-| Hero                                             |
-|  - H1: Welcome to Ghana’s Tourist Treasures      |
-|  - Intro paragraph                               |
-|  - Button: Explore Sites                         |
+| Hero: Heading, intro, button                     |
 +--------------------------------------------------+
-| Featured Destinations (cards in 1 column)        |
-|  [Image]                                         |
-|  Title                                           |
-|  Short description + Expect                      |
-|  Button: Learn more                              |
-|  --- repeat for 3 featured sites ---             |
+| Featured Destinations (cards stacked)            |
 +--------------------------------------------------+
 | Footer: References link                          |
 +--------------------------------------------------+
-          </pre>
-          <p class="wire-caption">Cards stack; primary actions are centered. Navigation collapses to a menu button.</p>
-        </div>
+      </pre>
+      <p class="wire-caption">Cards stack vertically; navigation collapses to a menu button.</p>
+    </div>
 
-        <div>
-          <h3>Desktop (wide)</h3>
-          <pre class="wire" role="img" aria-label="Desktop wireframe">
+    <div>
+      <h3>Desktop (wide)</h3>
+      <pre class="wire">
 +----------------------------------------------------------------------------------+
-| Header: Brand (left) | Nav (center) | Theme (right)                             |
+| Header: Brand | Nav | Theme                                                      |
 +----------------------------------------------------------------------------------+
-| Hero: H1 + intro + CTA centered                                                   |
+| Hero: Heading + intro + CTA centered                                             |
 +----------------------------------------------------------------------------------+
-| Featured Destinations (grid 3 columns)                                            |
-|  [Card 1]    [Card 2]    [Card 3]                                                |
-|  Image       Image        Image                                                   |
-|  Title       Title        Title                                                   |
-|  Desc        Desc         Desc                                                    |
-|  Button      Button       Button                                                  |
+| Featured Destinations (3-column grid of cards)                                   |
 +----------------------------------------------------------------------------------+
-| Footer: References link                                                           |
+| Footer: References link                                                          |
 +----------------------------------------------------------------------------------+
-          </pre>
-          <p class="wire-caption">Three-column grid for featured cards; balanced header with visible primary navigation.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="plan-section" aria-labelledby="testing-title">
-      <h2 id="testing-title">Testing and validation plan</h2>
-      <ul>
-        <li><strong>HTML/CSS validation:</strong> Validate pages using W3C validators; remove unused CSS rules.</li>
-        <li><strong>Accessibility:</strong> Check keyboard navigation, focus states, alt text, and heading order (WCAG AA contrast).</li>
-        <li><strong>Performance:</strong> Optimize images (WebP/JPEG), apply lazy loading, defer scripts.</li>
-        <li><strong>Best practices & SEO:</strong> Use descriptive titles, meta descriptions, meaningful link text, and canonical URLs.</li>
-        <li><strong>Responsiveness:</strong> Test mobile (portrait/landscape), tablet, and large desktop breakpoints.</li>
-      </ul>
-    </section>
+      </pre>
+      <p class="wire-caption">Three-column grid for featured cards; header shows full navigation.</p>
+    </div>
+  </div>
+</section>
   </main>
 
   <footer class="site-footer" role="contentinfo">
