@@ -186,3 +186,27 @@
 .card-body p {
   margin-bottom: var(--space-sm);
 }
+
+/* Page content wrapper */
+main {
+  background: #f9f9f9;              /* subtle light gray band */
+  padding: var(--space-xl) var(--space-lg);
+  margin: 0 auto;
+  max-width: 1200px;                /* keeps content centered */
+  box-sizing: border-box;
+  border-radius: var(--radius);     /* soft rounded edges */
+}
+
+/* Sections inside main */
+main section {
+  background: #fff;                 /* white cards inside the gray band */
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Ensure grid cards align nicely */
+.grid.cards {
+  gap: var(--space-lg);
+}
