@@ -1,76 +1,19 @@
-/* Cards */
-.card {
-  border: 1px solid #eee;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  background: #fff;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.card-body {
-  padding: var(--space-md);
-}
-
-/* Buttons */
 .btn {
-  display: inline-block;
   padding: var(--space-sm) var(--space-md);
-  border: none;
   border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
   background: var(--color-accent);
   color: #fff;
-  cursor: pointer;
-  font-size: 1rem;
+  transition: background 0.3s ease;
 }
 
 .btn:hover,
 .btn:focus {
-  background: #0d47a1;
+  background: #004d00;
 }
 
 .btn-secondary {
-  background: #ccc;
-  color: #222;
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus {
-  background: #999;
-}
-
-/* Forms */
-form {
-  margin-bottom: var(--space-lg);
-}
-
-.form-row {
-  margin-bottom: var(--space-md);
-}
-
-label {
-  display: block;
-  margin-bottom: var(--space-xs);
-  font-weight: bold;
-}
-
-input,
-select {
-  width: 100%;
-  padding: var(--space-sm);
-  border: 1px solid #ccc;
-  border-radius: var(--radius);
-  font-size: 1rem;
-}
-
-input:focus,
-select:focus {
-  outline: 2px solid var(--color-accent);
+  background: #ddd;
+  color: #333;
 }

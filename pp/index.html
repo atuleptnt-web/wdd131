@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tourist Sites in Ghana — Home</title>
+  <meta name="description" content="Discover Ghana’s rich history, culture, and natural wonders through its top tourist destinations.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Paul Tetteh Nerquaye-Tetteh">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <script src="scripts/data.js" defer></script>
+</head>
+<body>
+ <header class="site-header">
+  <a class="brand" href="index.html">Tourist Sites in Ghana</a>
+
+  <!-- Burger button -->
+  <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+    ☰
+  </button>
+
+  <!-- Navigation -->
+  <nav id="primary-nav" class="nav" aria-label="Primary">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sites.html">Sites</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="references.html">References</a></li>
+    </ul>
+  </nav>
+
+  <button id="theme-toggle" class="btn" aria-pressed="false" aria-label="Toggle theme">Theme</button>
+</header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Introduction">
+      <h1>Welcome to Ghana’s Tourist Treasures</h1>
+      <p>From historic castles to breathtaking waterfalls, Ghana offers unforgettable experiences for every traveler.</p>
+      <a class="btn" href="sites.html">Explore All Sites</a>
+    </section>
+
+    <!-- Featured Sites -->
+    <section aria-labelledby="featured-title">
+      <h2 id="featured-title">Featured Destinations</h2>
+      <div class="grid cards">
+        <article class="card">
+          <img src="images/capecoast.png" alt="Cape Coast Castle" loading="lazy">
+          <div class="card-body">
+            <h3>Cape Coast Castle</h3>
+            <p>A UNESCO World Heritage site central to the transatlantic slave trade.</p>
+            <p><strong>Expect:</strong> Guided tours, historical exhibits, ocean views.</p>
+            <a class="btn" href="sites.html">Learn more</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/Kakum_National_Park_bridge.png" alt="Canopy walkway at Kakum" loading="lazy">
+          <div class="card-body">
+            <h3>Kakum National Park</h3>
+            <p>A lush rainforest reserve famous for its canopy walkway.</p>
+            <p><strong>Expect:</strong> Walk among treetops, spot wildlife, eco-tourism activities.</p>
+            <a class="btn" href="sites.html">Learn more</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/Mole_National_Park_from_the_viewing_platform.png" alt="Elephants at Mole National Park" loading="lazy">
+          <div class="card-body">
+            <h3>Mole National Park</h3>
+            <p>Ghana’s largest wildlife refuge, home to elephants and antelopes.</p>
+            <p><strong>Expect:</strong> Safari drives, walking tours, birdwatching.</p>
+            <a class="btn" href="sites.html">Learn more</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Tourist Sites in Ghana</p>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script type="module" src="scripts/main.js" defer></script>
+</body>
+</html>

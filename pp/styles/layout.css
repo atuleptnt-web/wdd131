@@ -1,0 +1,141 @@
+/* Burger button */
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  display: none; /* hidden on desktop */
+  color: var(--color-accent);
+}
+
+/* Desktop nav */
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav a {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a:focus {
+  background: var(--color-accent-light);
+}
+
+/* Active link */
+.nav a[aria-current="page"] {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* show burger */
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--color-bg);
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    flex-direction: column;
+    width: 220px;
+    z-index: 1000;
+
+    /* Hidden by default */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav a {
+    padding: var(--space-md);
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav a:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Header & Nav */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  border-bottom: 1px solid #ddd;
+  background: var(--color-accent-light);
+  position: relative; /* ensures mobile nav positions correctly */
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--color-accent);
+}
+
+/* Footer */
+.site-footer {
+  padding: var(--space-md);
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* Hero */
+.hero {
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  background: var(--color-accent-light);
+}
+
+.hero h1 {
+  margin-bottom: var(--space-md);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid.cards {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .grid.cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .grid.cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
