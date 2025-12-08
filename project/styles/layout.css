@@ -99,13 +99,10 @@
   background: var(--color-accent-light);
   position: relative; /* ensures mobile nav positions correctly */
 }
-
 .brand {
   font-weight: bold;
   font-size: 1.25rem;
   color: var(--color-accent);
-}
-.brand a{
   text-decoration: none;
 }
 /* Footer */
@@ -115,6 +112,11 @@
   text-align: center;
   font-size: 0.9rem;
   color: var(--color-muted);
+}
+.site-footer a{
+  text-decoration: none;
+
+
 }
 
 /* Hero */
